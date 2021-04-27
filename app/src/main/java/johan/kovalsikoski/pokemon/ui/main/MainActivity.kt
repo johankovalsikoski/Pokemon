@@ -1,7 +1,8 @@
-package johan.kovalsikoski.pokemon
+package johan.kovalsikoski.pokemon.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import johan.kovalsikoski.pokemon.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

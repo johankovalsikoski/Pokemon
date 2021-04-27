@@ -61,6 +61,7 @@ dependencies {
     def koinVersion = "3.0.1"
     // Koin main features for Android (Scope, ViewModel ...)
     implementation "io.insert-koin:koin-android:$koinVersion"
+    implementation "io.insert-koin:koin-android-viewmodel:$koinVersion"
 
     // Koin for JUnit 4
     testImplementation "io.insert-koin:koin-test-junit4:$koinVersion"

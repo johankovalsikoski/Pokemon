@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 30
@@ -44,6 +45,8 @@ dependencies {
     implementation project(path: ':data')
     implementation project(path: ':presentation')
 
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     def appCompatVersion = "1.2.0"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
 
@@ -59,4 +62,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$navVersion"
+}
+repositories {
+    mavenCentral()
 }

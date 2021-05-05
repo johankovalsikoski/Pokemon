@@ -13,6 +13,5 @@ private val pokemonServiceModule = module {
     single { PokemonServiceImpl.providePokemonService(get()) }
 }
 
-val dataModules =
-    retrofitModule +
-            pokemonServiceModule
+val dataModules = retrofitModule +
+        pokemonServiceModule

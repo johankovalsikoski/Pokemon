@@ -2,7 +2,6 @@ package johan.kovalsikoski.data.repository
 
 import johan.kovalsikoski.core.helpers.Resource
 import johan.kovalsikoski.data.serviceModel.pokemonDetail.PokemonDetails
-import johan.kovalsikoski.data.serviceModel.pokemonList.PokemonList
 import johan.kovalsikoski.data.serviceModel.pokemonList.PokemonMinimalInfo
 import kotlinx.coroutines.flow.Flow
 

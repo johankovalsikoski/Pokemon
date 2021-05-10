@@ -44,8 +44,7 @@ dependencies {
     def koinVersion = "3.0.1"
     // Koin main features for Android (Scope, ViewModel ...)
     api "io.insert-koin:koin-android:$koinVersion"
-//    api "io.insert-koin:koin-android-viewmodel:$koinVersion"
-    api "org.koin:koin-android-viewmodel:$koinVersion"
+    api "io.insert-koin:koin-android-viewmodel:2.0.1" // For some reason this isn't up to date
 
     // Koin for JUnit 4
     api "io.insert-koin:koin-test-junit4:$koinVersion"
@@ -86,4 +85,5 @@ dependencies {
 }
 repositories {
     mavenCentral()
+    google()
 }

@@ -61,6 +61,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$navVersion"
+
 }
 repositories {
     mavenCentral()

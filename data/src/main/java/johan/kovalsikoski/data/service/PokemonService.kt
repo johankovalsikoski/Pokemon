@@ -5,11 +5,15 @@ import johan.kovalsikoski.data.serviceModel.pokemonList.PokemonList
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface PokemonService {
 
-    @GET("pokemon?offset={offset}&limit=20")
-    suspend fun getPokemonList(@Path("offset") offset: Int): Response<PokemonList>
+    @GET("pokemon")
+    suspend fun getPokemonList(
+        @Query("offset") offset: Int,
+        @Query("limit") limit: Int = 20
+    ): Response<PokemonList>
 
     @GET("pokemon/{pokemon}")
     suspend fun getPokemonDetail(@Path("pokemon") pokemonName: String): Response<PokemonDetails>

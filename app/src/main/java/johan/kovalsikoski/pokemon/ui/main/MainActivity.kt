@@ -15,7 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val viewModel by viewModel<MainViewModel>()
-    private lateinit var adapter: PokemonMinimalInfoAdapter
+    private val adapter: PokemonMinimalInfoAdapter by lazy { PokemonMinimalInfoAdapter() }
 
     private var _binding: ActivityMainBinding? = null
     private val binding: ActivityMainBinding
@@ -38,17 +38,18 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupList()
         startObservers()
-
-        adapter = PokemonMinimalInfoAdapter()
-
-        binding.pokemonMinimalInfo.adapter = adapter
-        binding.pokemonMinimalInfo.addItemDecoration(MarginItemDecoration(this, Rect(0,0,0,2)))
     }
 
     override fun onDestroy() {
         _binding = null
         super.onDestroy()
+    }
+
+    private fun setupList() {
+        binding.pokemonMinimalInfo.adapter = adapter
+        binding.pokemonMinimalInfo.addItemDecoration(MarginItemDecoration(this, Rect(0,0,0,2)))
     }
 
     private fun startObservers() {

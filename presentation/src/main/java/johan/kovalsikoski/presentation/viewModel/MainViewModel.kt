@@ -6,12 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import johan.kovalsikoski.core.helpers.Resource
 import johan.kovalsikoski.core.helpers.Status
-import johan.kovalsikoski.data.repository.PokemonRepositoryImpl
+import johan.kovalsikoski.data.repository.PokemonRepository
 import johan.kovalsikoski.data.serviceModel.pokemonList.PokemonMinimalInfo
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val repository: PokemonRepositoryImpl) : ViewModel() {
+class MainViewModel(private val repository: PokemonRepository) : ViewModel() {
 
     private val _loading = MutableLiveData(false)
     val loading: LiveData<Boolean>
